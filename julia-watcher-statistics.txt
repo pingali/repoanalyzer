@@ -1,0 +1,291 @@
+Repo statistics of watchers of julialang/julia
+Total Watchers: 873
+Total Repositories: 10274
+====================
+Repos using Language
+--------------------
+        Ruby	        2058
+  JavaScript	        1962
+       Shell	        1123
+      Python	        1037
+           C	         811
+         C++	         460
+        Java	         382
+        Perl	         365
+        VimL	         337
+         PHP	         298
+ Objective-C	         285
+CoffeeScript	         240
+     Clojure	         230
+  Emacs Lisp	         215
+     Haskell	         141
+          C#	         119
+      Erlang	         115
+           R	         110
+    Assembly	          91
+      Scheme	          83
+       Scala	          81
+      Matlab	          81
+ Common Lisp	          81
+          Go	          61
+         Lua	          58
+     FORTRAN	          53
+           D	          51
+      Prolog	          45
+Visual Basic	          42
+ Objective-J	          41
+       OCaml	          40
+        Rust	          37
+ActionScript	          36
+         Tcl	          32
+      Groovy	          21
+         ASP	          20
+   Smalltalk	          19
+      Delphi	          16
+          F#	          14
+      Factor	          13
+          Io	          13
+         Ada	           9
+     Verilog	           9
+      Turing	           8
+      Puppet	           8
+      Parrot	           7
+          Nu	           6
+        Vala	           6
+      Racket	           6
+         Arc	           5
+       Rebol	           5
+SuperCollider	           5
+        HaXe	           4
+ Standard ML	           4
+      Eiffel	           3
+  AutoHotkey	           3
+      XQuery	           3
+    Modelica	           3
+        Gosu	           3
+       Fancy	           3
+        Ioke	           2
+         ooc	           2
+     Arduino	           2
+       Dylan	           2
+       Mirah	           2
+  ColdFusion	           2
+     Nemerle	           2
+         Coq	           1
+      Elixir	           1
+      Nimrod	           1
+         Opa	           1
+        Self	           1
+   Pure Data	           1
+====================
+=======================================
+Code Size Distribution across All Repos
+---------------------------------------
+           C	  1247504382
+         C++	   753415032
+        Ruby	   494867276
+  JavaScript	   494377379
+      Erlang	   437858515
+        Java	   388433292
+      Python	   268830921
+         PHP	   141826005
+  Emacs Lisp	   107171602
+       Shell	    99397627
+          C#	    93065723
+    Assembly	    83038518
+        VimL	    79929415
+ Objective-C	    73394293
+ Objective-J	    68223345
+        Perl	    59059524
+ Common Lisp	    34135311
+       Dylan	    33176739
+     FORTRAN	    29148084
+       Scala	    19929666
+      Scheme	    16250302
+      Factor	    12069145
+     Clojure	    10892723
+         Tcl	    10186446
+          F#	     9498050
+        Rust	     8840210
+CoffeeScript	     7376698
+           D	     7276742
+       OCaml	     7118693
+         Lua	     6561570
+          Io	     5738318
+Visual Basic	     5628933
+ActionScript	     5342280
+     Haskell	     5117536
+    Modelica	     4575468
+      Parrot	     4466697
+           R	     4124236
+          Go	     3977048
+      Matlab	     3110848
+         Ada	     2383542
+         ASP	     1061382
+      Delphi	      924843
+      Prolog	      917780
+     Verilog	      890646
+       Fancy	      662205
+         Arc	      636789
+      Groovy	      539079
+          Nu	      447539
+        HaXe	      433459
+        Vala	      329066
+   Smalltalk	      209897
+  ColdFusion	      182550
+         ooc	      152174
+      Turing	       91188
+        Gosu	       81595
+      Puppet	       76953
+SuperCollider	       39917
+       Mirah	       37062
+      Racket	       32126
+      Elixir	       29166
+ Standard ML	       24108
+       Rebol	       21069
+      XQuery	       12119
+  AutoHotkey	       10161
+   Pure Data	        4369
+      Eiffel	        4024
+         Opa	        1661
+        Self	        1176
+     Arduino	        1092
+         Coq	         807
+     Nemerle	         198
+        Ioke	          88
+      Nimrod	          43
+=======================================
+=======================================
+Repos using Language (Top 3 langs/Repo)
+---------------------------------------
+        Ruby	        1943
+  JavaScript	        1834
+      Python	         866
+       Shell	         829
+           C	         729
+         C++	         393
+        Java	         340
+        VimL	         297
+         PHP	         256
+ Objective-C	         228
+        Perl	         227
+CoffeeScript	         226
+     Clojure	         205
+  Emacs Lisp	         130
+     Haskell	         110
+      Erlang	         103
+          C#	          95
+ Common Lisp	          67
+       Scala	          65
+           R	          53
+          Go	          44
+      Matlab	          42
+         Lua	          40
+ Objective-J	          36
+      Scheme	          32
+     FORTRAN	          25
+ActionScript	          25
+    Assembly	          24
+Visual Basic	          23
+       OCaml	          20
+      Prolog	          17
+        Rust	          15
+           D	          14
+      Groovy	          11
+         Tcl	           9
+         ASP	           9
+          F#	           7
+          Io	           6
+         Arc	           5
+      Factor	           5
+        Vala	           5
+   Smalltalk	           5
+      Delphi	           4
+      Parrot	           4
+      Puppet	           4
+     Verilog	           4
+          Nu	           3
+  AutoHotkey	           2
+      Turing	           2
+        HaXe	           2
+       Dylan	           2
+    Modelica	           2
+  ColdFusion	           2
+       Fancy	           2
+ Standard ML	           1
+     Arduino	           1
+         Ada	           1
+      Racket	           1
+         Opa	           1
+         ooc	           1
+       Mirah	           1
+        Gosu	           1
+   Pure Data	           1
+=======================================
+========================================
+Code Size Distribution (Top 3 Langs/Repo
+----------------------------------------
+           C	  1244239462
+         C++	   715970629
+  JavaScript	   486041253
+        Ruby	   450834699
+      Erlang	   437517431
+        Java	   358073962
+      Python	   250739460
+         PHP	   134779243
+  Emacs Lisp	   102682287
+          C#	    83650168
+        VimL	    79485361
+    Assembly	    71550833
+ Objective-J	    68220346
+ Objective-C	    61822072
+       Shell	    56435983
+        Perl	    44930782
+ Common Lisp	    33712698
+       Dylan	    33176739
+     FORTRAN	    24086450
+       Scala	    19029935
+      Factor	    12023909
+     Clojure	    10368322
+          F#	     9366685
+        Rust	     8552117
+       OCaml	     6310708
+CoffeeScript	     6308974
+         Lua	     6055854
+           D	     5987793
+          Io	     5710125
+Visual Basic	     5374480
+ActionScript	     5080484
+     Haskell	     4810166
+      Parrot	     4419896
+      Scheme	     4256718
+           R	     3673781
+          Go	     3057292
+      Matlab	     2909099
+         Ada	     1144525
+         Tcl	     1139314
+     Verilog	      849074
+       Fancy	      653910
+         Arc	      636789
+      Groovy	      491298
+          Nu	      404024
+        HaXe	      380757
+    Modelica	      340528
+        Vala	      328545
+  ColdFusion	      182550
+      Prolog	      154322
+      Delphi	      134119
+         ASP	       97101
+         ooc	       68517
+      Puppet	       57652
+       Mirah	       32487
+      Turing	       17389
+      Racket	       10699
+  AutoHotkey	       10138
+   Smalltalk	        8532
+ Standard ML	        7705
+   Pure Data	        4369
+         Opa	        1661
+     Arduino	        1011
+        Gosu	         393
+========================================
