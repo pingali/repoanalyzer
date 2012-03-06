@@ -5,3 +5,5 @@ Simple command to go through the watchers of a given repository, and
 try and infer what languages and code sizes they deal with.
 
 Usage: python analyze.py <username> <reponame> 
+
+Dependency: pygithub3 
