@@ -1,37 +1,41 @@
 from pygithub3 import Github
 import time 
 import operator 
+import sys
 
 # Debug
-debug = True
+debug = False 
 watcher_count = 1
 
 # overall stats
 total_repositories = 0 
+total_watchers = 0 
 
 # All languages
 language_distribution_raw = {} 
 language_count = {} 
 
 # Only the top n languages 
-top_n = 2
+top_n = 3
 language_distribution_top_n = {} 
 language_count_top_n = {} 
 
-def add_to_hash(h, k, v): 
+def update_hash(h, k, v): 
+    """
+    Update the hash 
+    """
     if k in h:
         h[k] += v 
     else:
         h[k] = v
 
 def print_hash(h, title, description=""): 
+    """
+    Structure the output 
+    """
     print "=" * len(title)
     print "%s" % (title) 
-    print "%s" % (description) 
     print "-" * len(title)
-    header = "%12s\t%12s" % ("Lang", "Count")
-    print header
-    print "-" * (len(header) + 8)
     sorted_h = sorted(h.iteritems(), 
                               key=operator.itemgetter(1), 
                               reverse=True)
@@ -40,6 +44,11 @@ def print_hash(h, title, description=""):
     print "=" * len(title)
         
 def process_language_dict(watcher_name, repo_name, languages):
+    """
+    Process the language information available for each watcher and
+    repo combination. Languages is a dictionary with tuples(lang ->
+    code size)
+    """
     global total_repositories, language_distribution_raw 
     global top_n, language_distribution_top_n 
     global debug 
@@ -48,8 +57,8 @@ def process_language_dict(watcher_name, repo_name, languages):
 
     # Count languages 
     for k,v in languages.items(): 
-        add_to_hash(language_count, k, 1) 
-        add_to_hash(language_distribution_raw, k, v) 
+        update_hash(language_count, k, 1) 
+        update_hash(language_distribution_raw, k, v) 
 
     sorted_languages = sorted(languages.iteritems(), 
                               key=operator.itemgetter(1), reverse=True)
@@ -60,16 +69,23 @@ def process_language_dict(watcher_name, repo_name, languages):
         if (v == 0): 
             next 
         if debug: print "# top n :", k, type(k), v, type(v) 
-        add_to_hash(language_distribution_top_n, k, v) 
-        add_to_hash(language_count_top_n, k, 1) 
+        update_hash(language_distribution_top_n, k, v) 
+        update_hash(language_count_top_n, k, 1) 
         count -= 1 
         if (count <= 0): 
             break 
             
-        
-def process_repo(gh, root_user, root_repo): 
+
+def process(gh, root_user, root_repo): 
+    """
+    Main function. Looks for the watchers of each repo and for each
+    watcher obtain a list of repos and language distribution of each
+    repo.
+    
+    """
+
     global debug
-    global watcher_count 
+    global watcher_count, total_watchers 
 
     watchers = gh.repos.watchers.list(user=root_user, repo=root_repo)
     if debug: print "# Obtained all watchers" 
@@ -80,11 +96,13 @@ def process_repo(gh, root_user, root_repo):
         
         # Skip self 
         if debug: print "# '%s' '%s'" % (watcher_name.lower(), root_user.lower())
+
         if (watcher_name.lower() == root_user.lower()):
-            next 
+            continue 
+        total_watchers += 1 
 
         try: 
-            if debug: print "# Processing watcher ", watcher_name, type(watcher_name)
+            print "# Processing watcher ", watcher_name
             repos = gh.repos.list(watcher_name).all() 
             #if debug: print "# ", repos 
             for repo in repos: 
@@ -109,13 +127,31 @@ def process_repo(gh, root_user, root_repo):
             if (watcher_count < 0): 
                 break 
 
+
+#############################################################
+# Main 
+#############################################################
+
+if (len(sys.argv) > 2):
+    root_user = sys.argv[1]
+    root_repo = sys.argv[2]
+else:
+    print "Usage: python analyze.py <username> <repository>" 
+    exit(1) 
+
+if debug: print "# Processing %s/%s " % (root_user, root_repo)  
+
 gh = Github()
-process_repo(gh, 'julialang'.encode('ascii'), 'julia'.encode('ascii'))
+process(gh, root_user, root_repo) 
 
-print "Statistics on the repos of watchers of julia" 
+#############################################################
+# Output
+#############################################################
 
+print "Repo statistics of watchers of %s/%s"  % (root_user, root_repo)
+print "Total Watchers: %d" % total_watchers 
 print "Total Repositories: %d" % total_repositories 
 print_hash(language_count, "Repos using Language",   "") 
 print_hash(language_distribution_raw, "Code Size Distribution across All Repos", ) 
-print_hash(language_count_top_n, "Repos using Language (Only top %d languages/Repo)" % top_n, "") 
-print_hash(language_distribution_top_n, "Code Size Distribution (Only top %d Languages/Repo" % top_n, "") 
+print_hash(language_count_top_n, "Repos using Language (Top %d langs/Repo)" % top_n, "") 
+print_hash(language_distribution_top_n, "Code Size Distribution (Top %d Langs/Repo" % top_n, "") 
