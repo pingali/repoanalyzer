@@ -1,9 +1,13 @@
-Repo Statistics 
+Repo Analyzer 
 ----------------
 
-Simple command to go through the watchers of a given repository, and
-try and infer what languages and code sizes they deal with.
+Simple command that will go through the watchers of a given GitHub
+repository, and try and summarize the repositories that the watchers
+own. This will help you understand the community for a given repo.
 
 Usage: python analyze.py <username> <reponame> 
 
-Dependency: pygithub3 
+Example: python analyze.py julialang julia 
+Output: julia-watcher-statistics.txt 
+
+Dependency: pygithub3 (http://pypi.python.org/pypi/pygithub3) 

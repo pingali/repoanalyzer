@@ -1,290 +1,293 @@
-Repo statistics of watchers of julialang/julia
-Total Watchers: 873
-Total Repositories: 10274
+Repo Statistics for julialang/julia
+-----------------------------
+Command: python analyze.py julialang julia 
+Flags: debug = True, max_watchers = 1000, ignore duplicate repos = True
+Total Watchers: 881
+Total Repositories: 8575
 ====================
 Repos using Language
 --------------------
-        Ruby	        2058
-  JavaScript	        1962
-       Shell	        1123
-      Python	        1037
-           C	         811
-         C++	         460
-        Java	         382
-        Perl	         365
-        VimL	         337
-         PHP	         298
- Objective-C	         285
-CoffeeScript	         240
-     Clojure	         230
-  Emacs Lisp	         215
-     Haskell	         141
-          C#	         119
-      Erlang	         115
-           R	         110
-    Assembly	          91
-      Scheme	          83
-       Scala	          81
-      Matlab	          81
- Common Lisp	          81
-          Go	          61
-         Lua	          58
-     FORTRAN	          53
-           D	          51
-      Prolog	          45
-Visual Basic	          42
- Objective-J	          41
-       OCaml	          40
-        Rust	          37
-ActionScript	          36
-         Tcl	          32
-      Groovy	          21
-         ASP	          20
-   Smalltalk	          19
-      Delphi	          16
-          F#	          14
-      Factor	          13
-          Io	          13
-         Ada	           9
-     Verilog	           9
-      Turing	           8
-      Puppet	           8
+        Ruby	        1679
+  JavaScript	        1639
+      Python	         867
+       Shell	         778
+           C	         663
+         C++	         367
+        Java	         342
+         PHP	         270
+        Perl	         261
+ Objective-C	         252
+        VimL	         207
+CoffeeScript	         198
+     Clojure	         184
+  Emacs Lisp	         124
+     Haskell	         109
+          C#	         104
+      Erlang	          96
+ Common Lisp	          82
+           R	          68
+       Scala	          66
+          Go	          53
+         Lua	          47
+      Matlab	          46
+      Scheme	          43
+    Assembly	          36
+           D	          36
+       OCaml	          34
+ActionScript	          33
+Visual Basic	          33
+      Prolog	          31
+     FORTRAN	          28
+        Rust	          27
+         Tcl	          19
+      Groovy	          18
+ Objective-J	          18
+         ASP	          16
+   Smalltalk	          16
+      Delphi	          15
+          F#	          10
+          Io	          10
+      Factor	           9
+     Verilog	           8
       Parrot	           7
-          Nu	           6
+      Turing	           6
         Vala	           6
-      Racket	           6
-         Arc	           5
-       Rebol	           5
-SuperCollider	           5
-        HaXe	           4
+      Puppet	           6
+         Ada	           5
+          Nu	           5
+         Arc	           4
+SuperCollider	           4
  Standard ML	           4
       Eiffel	           3
+       Rebol	           3
   AutoHotkey	           3
       XQuery	           3
-    Modelica	           3
         Gosu	           3
-       Fancy	           3
-        Ioke	           2
          ooc	           2
      Arduino	           2
-       Dylan	           2
+      Racket	           2
+    Modelica	           2
        Mirah	           2
   ColdFusion	           2
-     Nemerle	           2
          Coq	           1
-      Elixir	           1
+        Ioke	           1
+  Powershell	           1
+        HaXe	           1
       Nimrod	           1
          Opa	           1
         Self	           1
+       Dylan	           1
+     Nemerle	           1
+       Fancy	           1
    Pure Data	           1
 ====================
 =======================================
 Code Size Distribution across All Repos
 ---------------------------------------
-           C	  1247504382
-         C++	   753415032
-        Ruby	   494867276
-  JavaScript	   494377379
-      Erlang	   437858515
-        Java	   388433292
-      Python	   268830921
-         PHP	   141826005
-  Emacs Lisp	   107171602
-       Shell	    99397627
-          C#	    93065723
-    Assembly	    83038518
-        VimL	    79929415
- Objective-C	    73394293
- Objective-J	    68223345
-        Perl	    59059524
- Common Lisp	    34135311
-       Dylan	    33176739
-     FORTRAN	    29148084
-       Scala	    19929666
-      Scheme	    16250302
-      Factor	    12069145
-     Clojure	    10892723
-         Tcl	    10186446
-          F#	     9498050
-        Rust	     8840210
-CoffeeScript	     7376698
-           D	     7276742
-       OCaml	     7118693
-         Lua	     6561570
-          Io	     5738318
-Visual Basic	     5628933
-ActionScript	     5342280
-     Haskell	     5117536
-    Modelica	     4575468
+           C	   892163099
+         C++	   591840263
+  JavaScript	   373378157
+        Java	   360461728
+        Ruby	   253998913
+      Erlang	   236843927
+      Python	   186197573
+         PHP	   134116811
+       Shell	    80459945
+          C#	    79890985
+ Objective-C	    60966512
+ Objective-J	    51471124
+        Perl	    48436133
+ Common Lisp	    43757590
+  Emacs Lisp	    37957107
+    Assembly	    31222047
+       Scala	    17640630
+     FORTRAN	    16888590
+        VimL	    16232588
+          F#	     9401016
+      Scheme	     8933536
+         Tcl	     8879594
+     Clojure	     7436142
+       OCaml	     6735645
+         Lua	     5894344
+Visual Basic	     5303974
+ActionScript	     5208176
       Parrot	     4466697
-           R	     4124236
-          Go	     3977048
-      Matlab	     3110848
-         Ada	     2383542
-         ASP	     1061382
-      Delphi	      924843
-      Prolog	      917780
-     Verilog	      890646
-       Fancy	      662205
-         Arc	      636789
-      Groovy	      539079
-          Nu	      447539
-        HaXe	      433459
+CoffeeScript	     4242774
+           R	     3809910
+        Rust	     3631857
+          Go	     3595454
+     Haskell	     3410071
+      Matlab	     2824954
+           D	     2816827
+         Ada	     1223089
+      Delphi	      899617
+     Verilog	      858141
+         Arc	      634372
+      Groovy	      530131
+          Nu	      447504
+    Modelica	      340528
         Vala	      329066
-   Smalltalk	      209897
+      Prolog	      309142
+         ASP	      245785
   ColdFusion	      182550
+   Smalltalk	      163905
          ooc	      152174
-      Turing	       91188
         Gosu	       81595
-      Puppet	       76953
-SuperCollider	       39917
+      Puppet	       75667
+      Turing	       62890
+      Factor	       45023
+          Io	       42673
        Mirah	       37062
-      Racket	       32126
-      Elixir	       29166
  Standard ML	       24108
-       Rebol	       21069
+       Rebol	       18852
       XQuery	       12119
+      Racket	       11946
   AutoHotkey	       10161
+        HaXe	        9423
+SuperCollider	        8937
+       Fancy	        8295
+  Powershell	        7265
    Pure Data	        4369
       Eiffel	        4024
+       Dylan	        3097
          Opa	        1661
         Self	        1176
      Arduino	        1092
          Coq	         807
-     Nemerle	         198
-        Ioke	          88
+     Nemerle	          99
+        Ioke	          44
       Nimrod	          43
 =======================================
 =======================================
-Repos using Language (Top 3 langs/Repo)
+Repos using Language (Top 5 langs/Repo)
 ---------------------------------------
-        Ruby	        1943
-  JavaScript	        1834
-      Python	         866
-       Shell	         829
-           C	         729
-         C++	         393
-        Java	         340
-        VimL	         297
-         PHP	         256
- Objective-C	         228
-        Perl	         227
-CoffeeScript	         226
-     Clojure	         205
-  Emacs Lisp	         130
-     Haskell	         110
-      Erlang	         103
+        Ruby	        1652
+  JavaScript	        1613
+      Python	         828
+       Shell	         716
+           C	         648
+         C++	         350
+        Java	         325
+         PHP	         248
+ Objective-C	         232
+        Perl	         219
+        VimL	         194
+CoffeeScript	         192
+     Clojure	         173
+  Emacs Lisp	         109
+     Haskell	         101
           C#	          95
- Common Lisp	          67
-       Scala	          65
-           R	          53
-          Go	          44
-      Matlab	          42
-         Lua	          40
- Objective-J	          36
-      Scheme	          32
-     FORTRAN	          25
-ActionScript	          25
-    Assembly	          24
-Visual Basic	          23
-       OCaml	          20
-      Prolog	          17
-        Rust	          15
-           D	          14
+      Erlang	          89
+ Common Lisp	          76
+       Scala	          61
+           R	          57
+          Go	          45
+      Matlab	          40
+         Lua	          36
+      Scheme	          30
+ActionScript	          27
+Visual Basic	          25
+       OCaml	          23
+    Assembly	          22
+      Prolog	          22
+     FORTRAN	          20
+           D	          19
+ Objective-J	          14
+        Rust	          13
       Groovy	          11
-         Tcl	           9
-         ASP	           9
-          F#	           7
-          Io	           6
-         Arc	           5
-      Factor	           5
-        Vala	           5
-   Smalltalk	           5
-      Delphi	           4
+         Tcl	          10
+         ASP	          10
+          F#	           9
+      Delphi	           6
+        Vala	           6
+   Smalltalk	           6
+     Verilog	           6
+      Puppet	           5
+         Arc	           4
+      Factor	           4
+          Nu	           4
       Parrot	           4
-      Puppet	           4
-     Verilog	           4
-          Nu	           3
+      Turing	           3
+SuperCollider	           3
+          Io	           3
   AutoHotkey	           2
-      Turing	           2
-        HaXe	           2
-       Dylan	           2
     Modelica	           2
   ColdFusion	           2
-       Fancy	           2
+      Eiffel	           1
  Standard ML	           1
      Arduino	           1
-         Ada	           1
       Racket	           1
          Opa	           1
+       Dylan	           1
          ooc	           1
        Mirah	           1
         Gosu	           1
+       Fancy	           1
    Pure Data	           1
 =======================================
 ========================================
-Code Size Distribution (Top 3 Langs/Repo
+Code Size Distribution (Top 5 Langs/Repo
 ----------------------------------------
-           C	  1244239462
-         C++	   715970629
-  JavaScript	   486041253
-        Ruby	   450834699
-      Erlang	   437517431
-        Java	   358073962
-      Python	   250739460
-         PHP	   134779243
-  Emacs Lisp	   102682287
-          C#	    83650168
-        VimL	    79485361
-    Assembly	    71550833
- Objective-J	    68220346
- Objective-C	    61822072
-       Shell	    56435983
-        Perl	    44930782
- Common Lisp	    33712698
-       Dylan	    33176739
-     FORTRAN	    24086450
-       Scala	    19029935
-      Factor	    12023909
-     Clojure	    10368322
-          F#	     9366685
-        Rust	     8552117
-       OCaml	     6310708
-CoffeeScript	     6308974
-         Lua	     6055854
-           D	     5987793
-          Io	     5710125
-Visual Basic	     5374480
-ActionScript	     5080484
-     Haskell	     4810166
+           C	   892092647
+         C++	   590752403
+  JavaScript	   371912300
+        Java	   354729758
+        Ruby	   253461753
+      Erlang	   236647682
+      Python	   180889969
+         PHP	   133416837
+       Shell	    79054883
+          C#	    77698413
+ Objective-C	    58212996
+ Objective-J	    51468320
+ Common Lisp	    43699106
+        Perl	    40576514
+  Emacs Lisp	    37178145
+    Assembly	    26433435
+       Scala	    17636771
+     FORTRAN	    16823117
+        VimL	    16074159
+          F#	     9400398
+      Scheme	     8838004
+     Clojure	     7345573
+       OCaml	     6315190
+         Lua	     5798928
+         Tcl	     5373341
+ActionScript	     5116139
+Visual Basic	     5091368
       Parrot	     4419896
-      Scheme	     4256718
-           R	     3673781
-          Go	     3057292
-      Matlab	     2909099
-         Ada	     1144525
-         Tcl	     1139314
-     Verilog	      849074
-       Fancy	      653910
-         Arc	      636789
+CoffeeScript	     4236535
+           R	     3685123
+          Go	     3501353
+        Rust	     3403669
+     Haskell	     3317427
+      Matlab	     2809688
+           D	     2614946
+     Verilog	      854164
+         Arc	      634372
+      Delphi	      624747
       Groovy	      491298
-          Nu	      404024
-        HaXe	      380757
+          Nu	      447469
     Modelica	      340528
-        Vala	      328545
+        Vala	      329066
   ColdFusion	      182550
-      Prolog	      154322
-      Delphi	      134119
-         ASP	       97101
+         ASP	      126685
+      Puppet	       75024
+      Prolog	       69588
          ooc	       68517
-      Puppet	       57652
+      Turing	       45761
+      Factor	       40912
        Mirah	       32487
-      Turing	       17389
+          Io	       14480
       Racket	       10699
   AutoHotkey	       10138
-   Smalltalk	        8532
+   Smalltalk	        9233
+       Fancy	        8295
  Standard ML	        7705
+SuperCollider	        6985
    Pure Data	        4369
+       Dylan	        3097
+      Eiffel	        2854
          Opa	        1661
      Arduino	        1011
         Gosu	         393

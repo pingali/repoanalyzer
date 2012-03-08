@@ -4,10 +4,12 @@ import operator
 import sys
 
 # Debug
-debug = False 
-watcher_count = 1
+debug = True
+max_watchers = 1000                 # Max number of watchers to process 
+ignore_duplicate_repos = True       # Count each repo only once (ignore forks)
 
 # overall stats
+all_repositories = {} 
 total_repositories = 0 
 total_watchers = 0 
 
@@ -16,7 +18,7 @@ language_distribution_raw = {}
 language_count = {} 
 
 # Only the top n languages 
-top_n = 3
+top_n = 5
 language_distribution_top_n = {} 
 language_count_top_n = {} 
 
@@ -63,12 +65,10 @@ def process_language_dict(watcher_name, repo_name, languages):
     sorted_languages = sorted(languages.iteritems(), 
                               key=operator.itemgetter(1), reverse=True)
     
-    if debug: print "# sorted languages ", sorted_languages 
     count = top_n 
     for (k,v) in sorted_languages: 
         if (v == 0): 
             next 
-        if debug: print "# top n :", k, type(k), v, type(v) 
         update_hash(language_distribution_top_n, k, v) 
         update_hash(language_count_top_n, k, 1) 
         count -= 1 
@@ -83,36 +83,43 @@ def process(gh, root_user, root_repo):
     repo.
     
     """
-
-    global debug
-    global watcher_count, total_watchers 
+    global debug, all_repositories, ignore_duplicate_repos
+    global max_watchers, total_watchers, total_repositories
 
     watchers = gh.repos.watchers.list(user=root_user, repo=root_repo)
-    if debug: print "# Obtained all watchers" 
-
+    print "# Obtained all watchers" 
+    
     for w in watchers.all(): 
         watcher_name = getattr(w, 'login','')
         watcher_name = watcher_name.encode('ascii', 'ignore')
         
-        # Skip self 
-        if debug: print "# '%s' '%s'" % (watcher_name.lower(), root_user.lower())
-
+        # Ignore self 
         if (watcher_name.lower() == root_user.lower()):
             continue 
+
         total_watchers += 1 
 
         try: 
-            print "# Processing watcher ", watcher_name
+            print "# Processing watcher %d - %s  (completed %d repos) " % \
+			(total_watchers, watcher_name, total_repositories)
             repos = gh.repos.list(watcher_name).all() 
             #if debug: print "# ", repos 
             for repo in repos: 
                 repo_name = getattr(repo, 'name', '') 
                 repo_name = repo_name.encode('ascii', 'ignore') 
-                if debug: print "# repo name ", repo_name, type(repo_name)  
+                if debug: print "# repo name ", repo_name
+                # Ignore duplicates 
+                if ignore_duplicate_repos: 
+                    if repo_name in all_repositories: 
+                        if debug: print "# Duplicate. Ignoring" 
+                        continue
+                    else:
+                        all_repositories[repo_name] = 1 
+
                 try: 
                     languages = gh.repos.list_languages(user=watcher_name, 
                                                         repo=repo_name)
-                    if debug: print "# languages ", languages, type(languages) 
+                    if debug: print "# languages ", languages
                     process_language_dict(watcher_name, repo_name, languages)
                 except: 
                     if debug: print "# Repo Error %s %s" % (watcher_name, repo_name)
@@ -123,8 +130,7 @@ def process(gh, root_user, root_repo):
             pass 
 
         if debug: 
-            watcher_count -= 1 
-            if (watcher_count < 0): 
+            if (total_watchers >= max_watchers): 
                 break 
 
 
@@ -148,7 +154,11 @@ process(gh, root_user, root_repo)
 # Output
 #############################################################
 
-print "Repo statistics of watchers of %s/%s"  % (root_user, root_repo)
+print "Repo Statistics for %s/%s"  % (root_user, root_repo)
+print "-----------------------------" 
+print "Command: python analyze.py %s %s " % (root_user, root_repo)
+print "Flags: debug = %s, max_watchers = %d, ignore duplicate repos = %s" \
+    % (debug, max_watchers, ignore_duplicate_repos) 
 print "Total Watchers: %d" % total_watchers 
 print "Total Repositories: %d" % total_repositories 
 print_hash(language_count, "Repos using Language",   "") 
